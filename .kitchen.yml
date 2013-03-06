@@ -1,0 +1,14 @@
+---
+driver_plugin: vagrant
+platforms:
+- name: ubuntu-12.04
+  driver_config:
+    box: ubuntu-12.04
+    box_url: https://mopub-virtual-machines.s3.amazonaws.com/ubuntu-12.04.box
+  run_list:
+  - recipe[apt]
+suites:
+- name: default
+  run_list:
+  - recipe[einarc]
+  attributes: {}
