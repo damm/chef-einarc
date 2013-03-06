@@ -1,14 +1,12 @@
 einarc Cookbook
 ===============
 
-This Cookbook will install einarc with the custom dependencies for the megacli to work.
-
+This Cookbook will install einarc from a repository with it's propritary makefile patched to get a newer version of megacli.  You can easily swap out the [upstream](https://github.com/damm/einarc) for the svn upstream (or create your own)
 
 Requirements
 ------------
 
-Ruby installed
-Git installed
+Ruby installed, can be omnibus ruby.
 
 Attributes
 ----------
@@ -25,19 +23,19 @@ Attributes
     <td><tt>['einarc']['modules']</tt></td>
     <td>Array</td>
     <td>Array of what storage modules to build</td>
-    <td><tt>[]</tt></td>
+    <td><tt>Array.new</tt></td>
   </tr>
   <tr>
     <td><tt>['einarc']['source_uri']</tt></td>
     <td>String</td>
     <td>Source repository to fetch einarc from</td>
-    <td><tt>"https://github.com/damm/einarc"</tt></td>
+    <td><tt>https://github.com/damm/einarc</tt></td>
   </tr>
   <tr>
     <td><tt>['einarc']['source_reference']</tt></td>
     <td>String</td>
     <td>Git reference to checkout with</td>
-    <td><tt>"production"</tt></td>
+    <td><tt>production</tt></td>
   </tr>
 </table>
 
