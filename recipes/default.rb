@@ -18,13 +18,13 @@ script "install einarc" do
   cwd Chef::Config[:file_cache_path] + "einarc"
   if node['einarc']['modules'].empty?
   code <<-EOH
-	./configure --destdir=#{node['einarc']['destdir']}
+	./configure 
 	mkdir -p proprietary && touch proprietary/agreed
 	make && make install
 	EOH
   else
   code <<-EOH
-	./configure --destdir=#{node['einarc']['destdir']} --modules=#{node['einarc']['modules'].join(", ")}
+	./configure --modules=#{node['einarc']['modules'].join(", ")}
 	mkdir -p proprietary && touch proprietary/agreed
 	make && make install
 	EOH
