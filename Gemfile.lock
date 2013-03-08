@@ -28,6 +28,13 @@ GIT
       safe_yaml
       thor
 
+GIT
+  remote: https://github.com/portertech/kitchen-lxc.git
+  revision: fa81773bbc6c53bb02b436c4e5b6f9b02fcedb02
+  specs:
+    kitchen-lxc (0.0.1.beta1)
+      test-kitchen (>= 1.0.0.alpha.0)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -180,6 +187,7 @@ DEPENDENCIES
   berkshelf
   foodcritic
   kitchen-ec2!
+  kitchen-lxc!
   kitchen-vagrant!
   rake
   rspec
