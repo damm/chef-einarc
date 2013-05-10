@@ -24,7 +24,7 @@ script "install einarc" do
 	EOH
   else
   code <<-EOH
-	./configure --modules=#{node['einarc']['modules'].join(", ")}
+	./configure --modules=#{node['einarc']['modules'].join(",")}
 	mkdir -p proprietary && touch proprietary/agreed
 	make && make install
 	EOH
