@@ -1,18 +1,4 @@
 GIT
-  remote: git://github.com/damm/test-kitchen.git
-  revision: 75d80dee38de42b62f77513753b0813e90ff1075
-  branch: busser_openssl_noverify
-  specs:
-    test-kitchen (1.0.0.alpha.0)
-      celluloid
-      mixlib-shellout
-      net-scp
-      net-ssh
-      pry
-      safe_yaml
-      thor
-
-GIT
   remote: git://github.com/opscode/kitchen-ec2.git
   revision: a896b02631a99d79eee753400e83295db41fedae
   specs:
@@ -22,15 +8,28 @@ GIT
 
 GIT
   remote: git://github.com/opscode/kitchen-vagrant.git
-  revision: 8c9570b6e7ed2a38349ac51617f64bce52a52ed7
+  revision: 4742374f7fb0d04cb3bf35be26cf54d152610b33
   specs:
-    kitchen-vagrant (0.6.1.dev)
-      test-kitchen (~> 1.0.0.alpha.0)
-      vagrant (~> 1.0)
+    kitchen-vagrant (0.10.1.dev)
+      test-kitchen (~> 1.0.0.alpha.6)
 
 GIT
-  remote: https://github.com/portertech/kitchen-lxc.git
-  revision: fa81773bbc6c53bb02b436c4e5b6f9b02fcedb02
+  remote: git://github.com/opscode/test-kitchen.git
+  revision: 1dc4a6681e288828d9c17ed2eb245a0eaf5d7aa3
+  branch: 1.0
+  specs:
+    test-kitchen (1.0.0.dev)
+      celluloid
+      mixlib-shellout
+      net-scp
+      net-ssh
+      pry
+      safe_yaml
+      thor
+
+GIT
+  remote: https://github.com/damm/kitchen-lxc.git
+  revision: 7e37b529008bcd5177f462379ff0987091fb9499
   specs:
     kitchen-lxc (0.0.1.beta1)
       test-kitchen (>= 1.0.0.alpha.0)
@@ -41,7 +40,7 @@ GEM
     activesupport (3.2.12)
       i18n (~> 0.6)
       multi_json (~> 1.0)
-    addressable (2.3.3)
+    addressable (2.3.4)
     archive-tar-minitar (0.5.2)
     berkshelf (1.2.1)
       activesupport
@@ -61,8 +60,7 @@ GEM
       thor (~> 0.16.0)
       yajl-ruby
     builder (3.2.0)
-    celluloid (0.12.4)
-      facter (>= 1.6.12)
+    celluloid (0.14.0)
       timers (>= 1.0.0)
     childprocess (0.3.9)
       ffi (~> 1.0, >= 1.0.11)
@@ -71,13 +69,12 @@ GEM
       hashie (>= 2.0.2)
       multi_json (>= 1.3.0)
     coderay (1.0.9)
-    diff-lcs (1.2.1)
+    diff-lcs (1.2.4)
     erubis (2.7.0)
-    excon (0.20.0)
-    facter (1.6.17)
-    faraday (0.8.6)
+    excon (0.21.0)
+    faraday (0.8.7)
       multipart-post (~> 1.1)
-    ffi (1.4.0)
+    ffi (1.8.1)
     fog (1.9.0)
       builder
       excon (~> 0.14)
@@ -88,33 +85,30 @@ GEM
       net-ssh (>= 2.1.3)
       nokogiri (~> 1.5.0)
       ruby-hmac
-    foodcritic (1.7.0)
+    foodcritic (2.1.0)
       erubis
-      gherkin (~> 2.11.1)
-      gist (~> 3.1.0)
+      gherkin (~> 2.11.7)
       nokogiri (~> 1.5.4)
-      pry (~> 0.9.8.4)
       rak (~> 1.4)
       treetop (~> 1.4.10)
       yajl-ruby (~> 1.1.0)
     formatador (0.2.4)
-    gherkin (2.11.5)
-      json (>= 1.4.6)
-    gist (3.1.1)
-    hashie (2.0.2)
+    gherkin (2.11.8)
+      multi_json (~> 1.3)
+    hashie (2.0.5)
     i18n (0.6.4)
-    json (1.5.5)
+    json (1.7.7)
     log4r (1.1.10)
-    method_source (0.7.1)
-    mime-types (1.21)
+    method_source (0.8.1)
+    mime-types (1.23)
     minitar (0.5.4)
     mixlib-authentication (1.3.0)
       mixlib-log
     mixlib-config (1.1.2)
-    mixlib-log (1.4.1)
+    mixlib-log (1.6.0)
     mixlib-shellout (1.1.0)
     moneta (0.6.0)
-    multi_json (1.6.1)
+    multi_json (1.7.3)
     multipart-post (1.2.0)
     net-http-persistent (2.8)
     net-scp (1.0.4)
@@ -122,16 +116,16 @@ GEM
     net-ssh (2.2.2)
     net-ssh-gateway (1.1.0)
       net-ssh (>= 1.99.1)
-    nokogiri (1.5.6)
+    nokogiri (1.5.9)
     polyglot (0.3.3)
-    pry (0.9.8.4)
+    pry (0.9.12.2)
       coderay (~> 1.0.5)
-      method_source (~> 0.7.1)
-      slop (>= 2.4.4, < 3)
+      method_source (~> 0.8)
+      slop (~> 3.4)
     rak (1.4)
-    rake (10.0.3)
+    rake (10.0.4)
     retryable (1.3.2)
-    ridley (0.8.3)
+    ridley (0.8.5)
       activesupport (>= 3.2.0)
       addressable
       celluloid
@@ -152,14 +146,14 @@ GEM
       rspec-core (~> 2.13.0)
       rspec-expectations (~> 2.13.0)
       rspec-mocks (~> 2.13.0)
-    rspec-core (2.13.0)
+    rspec-core (2.13.1)
     rspec-expectations (2.13.0)
       diff-lcs (>= 1.1.3, < 2.0)
-    rspec-mocks (2.13.0)
+    rspec-mocks (2.13.1)
     ruby-hmac (0.4.0)
-    safe_yaml (0.8.4)
-    slop (2.4.4)
-    solve (0.4.2)
+    safe_yaml (0.9.1)
+    slop (3.4.4)
+    solve (0.4.4)
       json
     thor (0.16.0)
     thor-foodcritic (0.2.0)
@@ -169,12 +163,12 @@ GEM
     treetop (1.4.12)
       polyglot
       polyglot (>= 0.3.1)
-    vagrant (1.0.6)
+    vagrant (1.0.7)
       archive-tar-minitar (= 0.5.2)
       childprocess (~> 0.3.1)
       erubis (~> 2.7.0)
       i18n (~> 0.6.0)
-      json (~> 1.5.1)
+      json (>= 1.5.1, < 1.8.0)
       log4r (~> 1.1.9)
       net-scp (~> 1.0.4)
       net-ssh (~> 2.2.2)
