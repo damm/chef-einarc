@@ -29,13 +29,13 @@ Attributes
     <td><tt>['einarc']['source_uri']</tt></td>
     <td>String</td>
     <td>Source repository to fetch einarc from</td>
-    <td><tt>https://github.com/damm/einarc</tt></td>
+    <td><tt>https://github.com/inq-team/einarc</tt></td>
   </tr>
   <tr>
     <td><tt>['einarc']['source_reference']</tt></td>
     <td>String</td>
     <td>Git reference to checkout with</td>
-    <td><tt>production</tt></td>
+    <td><tt>v2.0</tt></td>
   </tr>
 </table>
 
